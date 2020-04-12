@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.9.0",
+    "@types/moment": "^2.13.0",
     "@vue/test-utils": "^2.0.0-alpha.1",
+    "moment": "^2.24.0",
     "vue": "^3.0.0-alpha.12",
     "vue-router": "^4.0.0-alpha.5"
   }
