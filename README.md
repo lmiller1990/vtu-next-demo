@@ -26,3 +26,5 @@ Create mocks.ts and the Post interface. Write a failing test.
 Write a utility method to filter the post, apply it with computed.
 
 1.7 Refactoring with Confidence 
+
+Creating a TimelineItem component, run the tests.

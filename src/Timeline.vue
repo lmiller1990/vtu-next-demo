@@ -12,23 +12,8 @@
       </a>
     </p>
 
-    <a v-for="post in posts" :key="post.id" class="panel-block" data-test="post">
-      <div class="level">
-        <div>
-          <div>
-            <a
-              class="link"
-            >
-              {{ post.title }}
-            </a>
-          </div>
-          <span data-test="author">
-            {{ post.created.format('Do MMM') }}
-          </span>
-        </div>
-      </div>
-    </a>
-  </nav> 
+    <TimelineItem v-for="post in posts" :key="post.id" :post="post" />
+  </nav>
 </template>
 
 <script lang="ts">
@@ -37,8 +22,13 @@ import { defineComponent, ref, computed } from "vue"
 import { today, thisWeek, thisMonth } from './mocks'
 import { TimePeriod } from './types'
 import { filterPosts } from './timelineUtils'
+import TimelineItem from './TimelineItem.vue'
 
 export default defineComponent({
+  components: {
+    TimelineItem
+  },
+
   setup() {
     const tabs: TimePeriod[] = ['today', 'this week', 'this month']
     const activeTab = ref<TimePeriod>('today')
