@@ -11,6 +11,23 @@
         {{ tab }}
       </a>
     </p>
+
+    <a v-for="post in posts" :key="post.id" class="panel-block" data-test="post">
+      <div class="level">
+        <div>
+          <div>
+            <a
+              class="link"
+            >
+              {{ post.title }}
+            </a>
+          </div>
+          <span data-test="author">
+            {{ post.created.format('Do MMM') }}
+          </span>
+        </div>
+      </div>
+    </a>
   </nav> 
 </template>
 
@@ -19,6 +36,7 @@ import { defineComponent, ref, computed } from "vue"
 
 import { today, thisWeek, thisMonth } from './mocks'
 import { TimePeriod } from './types'
+import { filterPosts } from './timelineUtils'
 
 export default defineComponent({
   setup() {
@@ -26,7 +44,7 @@ export default defineComponent({
     const activeTab = ref<TimePeriod>('today')
 
     const posts = computed(() => {
-      return [today, thisWeek, thisMonth]
+      return filterPosts([today, thisWeek, thisMonth], activeTab.value)
     })
 
     const setActiveTab = (tab: TimePeriod) => {

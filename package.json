@@ -8,6 +8,7 @@
     "@types/jest": "^25.2.1",
     "@vue/compiler-sfc": "^3.0.0-alpha.11",
     "babel-jest": "^25.2.6",
+    "flush-promises": "^1.0.2",
     "jest": "^25.2.7",
     "ts-jest": "^25.3.1",
     "ts-loader": "^6.2.2",
