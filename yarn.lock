@@ -6820,10 +6820,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-jest@^5.0.0-alpha.0:
-  version "5.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-5.0.0-alpha.0.tgz#b03fe802a0c55ddacb73ff00b18c9c6e0fc0cfaa"
-  integrity sha512-bH+PY8e93V7ezSB+xefPkmUPwrtx1ilOGfjXi6kxctWChotsrP6KQDy2IAt5PRQ112Ajg3qD0bGGSOdlUk5odA==
+vue-jest@^5.0.0-alpha.1:
+  version "5.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-5.0.0-alpha.1.tgz#081a20e585420f19b441beb2cb2cd9869ecdfa5b"
+  integrity sha512-ZeLrhMBLFlAMvew3OZ5/Cyswa6oJq4jHAsp4SOyIqB/X6mchQmAe3t3wovUfCrqXiSzJH+BgVcNcMybUIsjcrg==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "^7.2.0"
     chalk "^2.1.0"
