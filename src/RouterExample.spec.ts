@@ -54,7 +54,7 @@ const router = createRouter({
 })
 
 test('renders a list of posts', async () => {
-  router.push('/1')
+  router.push('/')
   await router.isReady()
 
   const wrapper = mount(App, {
