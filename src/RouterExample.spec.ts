@@ -1,4 +1,4 @@
-import { createApp } from 'vue/dist/vue.esm-bundler.js'
+import { mount } from '@vue/test-utils'
 import { createRouter, createWebHistory } from 'vue-router'
 
 export const posts = [
@@ -53,4 +53,17 @@ const router = createRouter({
   ]
 })
 
-createApp(App).use(router).mount('#app')
+test('renders a list of posts', async () => {
+  router.push('/1')
+  await router.isReady()
+
+  const wrapper = mount(App, {
+    global: {
+      plugins: [router]
+    }
+  })
+
+  expect(wrapper.findAll('[data-test="link"]')).toHaveLength(3)
+  await wrapper.find('#post-1').trigger('click')
+  expect(wrapper.html()).toContain('This is Vue')
+})
