@@ -27,7 +27,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "vue": "^3.0.0-beta.17",
     "vue-router": "^4.0.0-alpha.13"
   }
